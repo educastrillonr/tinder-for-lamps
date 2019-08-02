@@ -1,0 +1,8 @@
+$btn-size: 50px;
+
+.btnStyle {
+  border-radius: 50%;
+  border: 8px black solid;
+  width: $btn-size;
+  height: $btn-size;
+}
