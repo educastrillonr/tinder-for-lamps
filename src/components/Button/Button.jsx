@@ -18,7 +18,7 @@ class Button extends Component {
       <button
         className={styles.btnStyle}
         style={this.getButtonStyle()}
-        onClick={this.handleClick}
+        onClick={this.props.handleClick}
       ></button>
     );
   }
