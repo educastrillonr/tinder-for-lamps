@@ -12,34 +12,35 @@ class App extends Component {
   rejectedCards = [];
   acceptedCards = [];
 
+  updateArray = cards => {
+    this.setState({
+      filteredData: cards
+    });
+  };
   rejectCard = () => {
     let copy = this.state.filteredData;
     this.rejectedCards.push(copy.pop());
-    this.setState({
-      filteredData: copy
-    });
+    this.updateArray(copy);
   };
 
   acceptCard = () => {
     let copy = this.state.filteredData;
     this.acceptedCards.push(copy.pop());
-    this.setState({
-      filteredData: copy
-    });
+    this.updateArray(copy);
   };
 
   render() {
     return (
       <div className="App">
-        <div className="container">
-          <Cards cards={this.rejectedCards} />
-          <Cards cards={this.state.filteredData} />
-          <Cards cards={this.acceptedCards} />
-        </div>
-        <div className="btn-container">
-          <Button type="reject" handleClick={this.rejectCard} />
-          <Button type="accept" handleClick={this.acceptCard} />
-        </div>
+        <section className="wrapper">
+          <section className="cards-container">
+            <Cards cards={this.state.filteredData} />
+          </section>
+          <section className="btn-container">
+            <Button type="reject" handleClick={this.rejectCard} />
+            <Button type="accept" handleClick={this.acceptCard} />
+          </section>
+        </section>
       </div>
     );
   }
