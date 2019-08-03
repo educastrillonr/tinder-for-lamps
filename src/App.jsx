@@ -11,11 +11,19 @@ class App extends Component {
 
   rejectedCards = [];
   acceptedCards = [];
+  disable = false;
+
+  checkForEmptyArray = () => {
+    if (this.state.filteredData.length === 0) {
+      this.disable = true;
+    }
+  };
 
   updateArray = cards => {
     this.setState({
       filteredData: cards
     });
+    this.checkForEmptyArray();
   };
   rejectCard = () => {
     let copy = this.state.filteredData;
@@ -37,8 +45,16 @@ class App extends Component {
             <Cards cards={this.state.filteredData} />
           </section>
           <section className="btn-container">
-            <Button type="reject" handleClick={this.rejectCard} />
-            <Button type="accept" handleClick={this.acceptCard} />
+            <Button
+              type="reject"
+              handleClick={this.rejectCard}
+              disable={this.disable}
+            />
+            <Button
+              type="accept"
+              handleClick={this.acceptCard}
+              disable={this.disable}
+            />
           </section>
         </section>
       </div>

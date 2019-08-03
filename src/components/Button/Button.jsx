@@ -16,6 +16,7 @@ class Button extends Component {
   render() {
     return (
       <button
+        disabled={this.props.disable}
         className={styles.btnStyle}
         style={this.getButtonStyle()}
         onClick={this.props.handleClick}
