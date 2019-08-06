@@ -16,7 +16,9 @@ class Cards extends Component {
   // }
 
   getCardStyle = () => {
-    return this.props.page === 0 ? { position: "absolute" } : "";
+    return this.props.page === 0
+      ? { position: "absolute" }
+      : { position: "relative" };
   };
 
   render() {
