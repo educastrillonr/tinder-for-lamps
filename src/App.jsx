@@ -31,15 +31,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="container">
-          <Cards cards={this.rejectedCards} />
-          <Cards cards={this.state.filteredData} />
-          <Cards cards={this.acceptedCards} />
-        </div>
-        <div className="btn-container">
-          <Button type="reject" handleClick={this.rejectCard} />
-          <Button type="accept" handleClick={this.acceptCard} />
-        </div>
+        <section className="main-wrapper">
+          <div className="card-container">
+            {/* <Cards cards={this.rejectedCards} /> */}
+            <Cards cards={this.state.filteredData} />
+            {/* <Cards cards={this.acceptedCards} /> */}
+          </div>
+          <div className="btn-container">
+            <Button type="reject" handleClick={this.rejectCard} />
+            <Button type="accept" handleClick={this.acceptCard} />
+          </div>
+        </section>
       </div>
     );
   }
