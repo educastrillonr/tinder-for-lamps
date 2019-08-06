@@ -7,7 +7,7 @@ class Card extends Component {
 
   render() {
     return (
-      <article className={styles.card}>
+      <article className={styles.card} style={this.props.style}>
         <img src={this.props.cardData.image} alt=""></img>
       </article>
     );
