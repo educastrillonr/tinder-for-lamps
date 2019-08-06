@@ -3,7 +3,7 @@ import { Router, Redirect } from "@reach/router";
 import TinderPage from "../../containers/TinderPage";
 import ResultsPage from "../../containers/ResultsPage";
 import data from "../../assets/data/data";
-import { navigate } from "@reach/router/lib/history";
+import { navigate } from "@reach/router";
 
 class Routes extends Component {
   state = {
@@ -49,7 +49,7 @@ class Routes extends Component {
           rejectCard={this.rejectCard}
           acceptCard={this.acceptCard}
         />
-        <ResultsPage path="ResultsPage" lampArray={this.state.filteredData} />
+        <ResultsPage path="ResultsPage" lampArray={this.acceptCard} />
       </Router>
     );
   }
