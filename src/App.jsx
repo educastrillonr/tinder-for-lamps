@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import Cards from "./containers/Cards";
-import data from "./assets/data/data";
-import Button from "./components/Button";
+import Routes from "./components/Routes";
 import "./App.css";
 
 class App extends Component {
+<<<<<<< HEAD
   state = {
     filteredData: data
   };
@@ -36,10 +35,14 @@ class App extends Component {
     this.acceptedCards.push(copy.pop());
     this.updateArray(copy);
   };
+=======
+  state = {};
+>>>>>>> 1235d5db90d9b2a966a79fc1b0517b46132431ce
 
   render() {
     return (
       <div className="App">
+<<<<<<< HEAD
         <section className="wrapper">
           <section className="cards-container">
             <Cards cards={this.state.filteredData} />
@@ -56,6 +59,10 @@ class App extends Component {
               disable={this.disable}
             />
           </section>
+=======
+        <section className="main-wrapper">
+          <Routes />
+>>>>>>> 1235d5db90d9b2a966a79fc1b0517b46132431ce
         </section>
       </div>
     );

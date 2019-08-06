@@ -1,4 +1,8 @@
 $width: 15em;
+<<<<<<< HEAD
+=======
+$width-mobile: 80vw;
+>>>>>>> 1235d5db90d9b2a966a79fc1b0517b46132431ce
 $height: $width * 3 / 2;
 
 .card {
@@ -6,9 +10,12 @@ $height: $width * 3 / 2;
   border-radius: 15%;
   width: $width;
   height: $height;
+<<<<<<< HEAD
   top: $height / 6;
+=======
+  top: -$height / 2;
+>>>>>>> 1235d5db90d9b2a966a79fc1b0517b46132431ce
   left: -$width / 2;
-  position: absolute;
 
   img {
     width: 90%;
