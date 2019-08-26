@@ -7,7 +7,7 @@ import data from "../../assets/data/data";
 class TinderPage extends Component {
   state = {
     isFinished: false,
-    filteredData: data
+    filteredData: [...this.props.images]
   };
 
   acceptedCards = [];
@@ -50,6 +50,8 @@ class TinderPage extends Component {
   };
 
   getMainSection = () => {
+    console.log(this.state.filteredData);
+
     return (
       <section className={styles.mainWrapper}>
         <div className={styles.cardContainer}>

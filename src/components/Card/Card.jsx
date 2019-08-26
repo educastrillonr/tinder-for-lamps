@@ -6,18 +6,20 @@ class Card extends Component {
   state = {};
 
   render() {
+    console.log(this.props.cardData);
+
     return (
       <article className={styles.card} style={this.props.style}>
-        <img src={this.props.cardData.image} alt=""></img>
+        <img src={this.props.cardData} alt=""></img>
       </article>
     );
   }
 }
 
-Card.propTypes = {
-  cardData: PropTypes.shape({
-    image: PropTypes.string
-  })
-};
+// Card.propTypes = {
+//   cardData: PropTypes.shape({
+//     image: PropTypes.string
+//   })
+// };
 
 export default Card;
