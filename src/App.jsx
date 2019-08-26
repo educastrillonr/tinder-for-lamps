@@ -3,11 +3,11 @@ import Routes from "./components/Routes";
 import TinderPage from "./containers/TinderPage";
 import { storage } from "./firebase";
 import "./App.css";
+import { navigate } from "@reach/router";
 
 class App extends Component {
   state = {
-    images: [],
-    isFinished: false
+    images: []
   };
 
   handleFileInput = e => {
@@ -33,31 +33,24 @@ class App extends Component {
                 const urls = [...this.state.images];
                 urls.push(url);
                 this.setState({ images: [...urls] });
+                if (this.state.images.length === images.length) {
+                  navigate("/TinderPage");
+                }
               });
           }
         );
       });
     }
-    // return <TinderPage url={this.state.url} />;
   };
 
   render() {
-    // if (this.state.images.length === 2) {
-    //   console.log("hello");
-
-    //   this.setState({
-    //     isFinished: true
-    //   });
-    // }
     return (
       <div className="App">
         <section className="main-wrapper">
           <Routes
             handleFileInput={this.handleFileInput}
             images={this.state.images}
-            isFinished={this.state.isFinished}
           />
-          {/* <TinderPage url={this.state.url} /> */}
         </section>
       </div>
     );

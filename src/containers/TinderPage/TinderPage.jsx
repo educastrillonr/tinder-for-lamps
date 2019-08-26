@@ -50,7 +50,7 @@ class TinderPage extends Component {
   };
 
   getMainSection = () => {
-    console.log(this.state.filteredData);
+    // console.log(this.state.filteredData);
 
     return (
       <section className={styles.mainWrapper}>
@@ -72,7 +72,7 @@ class TinderPage extends Component {
     if (!this.state.isFinished) {
       return this.getMainSection();
     } else {
-      console.log(this.state.filteredData);
+      // console.log(this.state.filteredData);
       return (
         <section className={styles.resultsWrapper}>
           <Cards cards={this.acceptedCards} page={1} />

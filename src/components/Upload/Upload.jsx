@@ -22,12 +22,12 @@ class Upload extends Component {
   };
   render() {
     // console.log(this.props.images);
-    if (this.props.images.length === 5) {
-      console.log(this.props.images);
+    // if (this.props.images.length === 5) {
+    //   //   console.log(this.props.images);
 
-      //   return <TinderPage images={this.props.images} />;
-      navigate("/TinderPage");
-    }
+    //   //   return <TinderPage images={this.props.images} />;
+    //   navigate("/TinderPage");
+    // }
     return (
       <React.Fragment>
         <input type="file" multiple onChange={this.props.handleFileInput} />
