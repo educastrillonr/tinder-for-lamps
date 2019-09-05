@@ -3,13 +3,13 @@ import "firebase/firestore";
 import "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCb4KHRH7ALk2sLFdwOQGzHaeZZSHxY0SI",
-  authDomain: "tinder-for-lamps.firebaseapp.com",
-  databaseURL: "https://tinder-for-lamps.firebaseio.com",
-  projectId: "tinder-for-lamps",
-  storageBucket: "tinder-for-lamps.appspot.com",
-  messagingSenderId: "240405345489",
-  appId: "1:240405345489:web:0b43fc67022036a6"
+  apiKey: "AIzaSyBrahVrjmK4WYzBYWlGaNqEGxC39BEA9EA",
+  authDomain: "lamps-402bd.firebaseapp.com",
+  databaseURL: "https://lamps-402bd.firebaseio.com",
+  projectId: "lamps-402bd",
+  storageBucket: "lamps-402bd.appspot.com",
+  messagingSenderId: "347744280587",
+  appId: "1:347744280587:web:a2312a9ab9c8ea84"
 };
 
 firebase.initializeApp(firebaseConfig);

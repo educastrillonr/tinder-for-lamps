@@ -1,40 +1,57 @@
-import React, { Component } from "react";
-import { navigate } from "@reach/router";
-import TinderPage from "../../containers/TinderPage";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import styles from "./Upload.module.scss";
 
-class Upload extends Component {
-  getImages = () => {
-    if (this.props.images.length > 0) {
-      return (
-        <React.Fragment>
-          {this.props.images.map((img, index) => (
-            <img
-              key={index}
-              src={`${img}` || "https://placekitten.com/g/200/300"}
-              alt=""
-            />
-          ))}
-        </React.Fragment>
-      );
-    } else {
-      return <p>loading...</p>;
-    }
-  };
-  render() {
-    // console.log(this.props.images);
-    // if (this.props.images.length === 5) {
-    //   //   console.log(this.props.images);
+const useStyles = makeStyles(theme => ({
+  button: {
+    margin: theme.spacing(1)
+  },
+  input: {
+    display: "none"
+  }
+}));
 
-    //   //   return <TinderPage images={this.props.images} />;
-    //   navigate("/TinderPage");
-    // }
+const useStylesCircle = makeStyles(theme => ({
+  progress: {
+    margin: theme.spacing(2)
+  }
+}));
+
+const Upload = props => {
+  const classes = useStyles();
+  const progressClass = useStylesCircle();
+
+  if (!props.loading) {
     return (
-      <React.Fragment>
-        <input type="file" multiple onChange={this.props.handleFileInput} />
-        {/* {this.getImages()} */}
-      </React.Fragment>
+      <section className={styles.wrapper}>
+        <input
+          accept="image/*"
+          className={classes.input}
+          id="text-button-file"
+          multiple
+          type="file"
+          onChange={props.handleFileInput}
+        />
+        <label htmlFor="text-button-file">
+          <Button
+            variant="contained"
+            component="span"
+            className={classes.button}
+          >
+            Upload
+          </Button>
+        </label>
+      </section>
+    );
+  } else {
+    return (
+      <section className={styles.wrapper}>
+        <CircularProgress className={progressClass.progress} />
+      </section>
     );
   }
-}
+};
 
 export default Upload;

@@ -10,12 +10,14 @@ class Routes extends Component {
         <Redirect noThrow from="/" to="upload" />
         <Upload
           path="/upload"
+          loading={this.props.loading}
           handleFileInput={this.props.handleFileInput}
-          images={this.props.images}
-          isFinished={this.props.isFinished}
         />
-        <TinderPage path="TinderPage" images={this.props.images} />
-        {/* <ResultsPage path="ResultsPage" lampArray={this.state.acceptedCards} /> */}
+        <TinderPage
+          path="TinderPage"
+          updateLoading={this.props.updateLoading}
+          images={this.props.images}
+        />
       </Router>
     );
   }

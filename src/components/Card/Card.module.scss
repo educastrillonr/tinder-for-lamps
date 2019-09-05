@@ -1,27 +1,27 @@
-$width: 15em;
-$width-mobile: 80vw;
-$height: $width * 3 / 2;
+// $width: 15em;
+// $width-mobile: 80vw;
+// $height: $width * 3 / 2;
 
-.card {
-  border: 2px solid black;
-  border-radius: 15%;
-  width: $width;
-  height: $height;
-  // top: $height / 2;
-  // left: $width * 3.5;
+// .card {
+//   border: 2px solid black;
+//   border-radius: 15%;
+//   width: $width;
+//   height: $height;
+//   // top: $height / 2;
+//   // left: $width * 3.5;
 
-  img {
-    width: 90%;
-    height: 90%;
-    border-radius: 15%;
-  }
+//   img {
+//     width: 90%;
+//     height: 90%;
+//     border-radius: 15%;
+//   }
 
-  // @media only screen and (max-width: 500px) {
-  //   .card {
-  //     width: $width-mobile;
-  //     height: $height-mobile;
-  //     top: -$height-mobile / 2;
-  //     left: -$width-mobile / 2;
-  //   }
-  // }
-}
+//   // @media only screen and (max-width: 500px) {
+//   //   .card {
+//   //     width: $width-mobile;
+//   //     height: $height-mobile;
+//   //     top: -$height-mobile / 2;
+//   //     left: -$width-mobile / 2;
+//   //   }
+//   // }
+// }

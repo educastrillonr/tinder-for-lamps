@@ -7,17 +7,9 @@ class Cards extends Component {
     cards: this.props.cards
   };
 
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps !== this.props.cards) {
-  //     this.setState({
-  //       cards: this.props.cards
-  //     });
-  //   }
-  // }
-
   getCardStyle = () => {
     return this.props.page === 0
-      ? { position: "absolute", top: "$height / 2", left: "$width * 3.5" }
+      ? { position: "absolute" }
       : { position: "relative" };
   };
 
@@ -25,7 +17,13 @@ class Cards extends Component {
     return (
       <section className={styles.cardsContainer}>
         {this.state.cards.map((card, index) => (
-          <Card cardData={card} key={index} style={this.getCardStyle()} />
+          <Card
+            acceptCard={this.props.acceptCard}
+            rejectCard={this.props.rejectCard}
+            cardData={card}
+            key={index}
+            style={this.getCardStyle()}
+          />
         ))}
       </section>
     );
