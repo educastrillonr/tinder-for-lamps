@@ -26,14 +26,16 @@ const ImgMediaCard = props => {
           title="tile"
         />
       </CardActionArea>
-      <CardActions>
-        <Button onClick={props.rejectCard} size="small" color="secondary">
-          Reject
-        </Button>
-        <Button onClick={props.acceptCard} size="small" color="primary">
-          Accept
-        </Button>
-      </CardActions>
+      {props.acceptCard ? (
+        <CardActions>
+          <Button onClick={props.rejectCard} size="small" color="secondary">
+            Reject
+          </Button>
+          <Button onClick={props.acceptCard} size="small" color="primary">
+            Accept
+          </Button>
+        </CardActions>
+      ) : null}
     </Card>
   );
 };
